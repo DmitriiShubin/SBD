@@ -6,6 +6,7 @@ Python/ Matlab project for detection abnormal ECG signals.
 Final performance: AUC-ROC 0.985
 
 Dataset: https://www.kaggle.com/shayanfazeli/heartbeat/home
+Download weights of the model (66Mb): https://drive.google.com/file/d/1nNueZK04G0hY1OMzG7zJdWeoAR7xjUnh/view?usp=sharing
 
 Hardware: Laptop Acer Nitro 5, CPU: i7-8750H, GPU: 1050Ti, 16GB RAM +SSD
 
