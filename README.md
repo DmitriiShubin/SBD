@@ -1,27 +1,24 @@
-## Sub-Band Decomposition for the time-series Deep Learning models
+## Summary
+
+This repository demonstrates ability to improve the target metring of the Deep Neural Network through the **Sub-Band Decomposition** - the method of the time-series pre-processing.
+
+Applications:
+
+* Audio processing, voice recognition, GAN-based de-noising, personalized audio Deep Networks
+* Time-series forcasting (Energy consumption, stock prices, real-estate prices)
+* Time-series segmentation (seq2seq, 1D-Unet, 1D-Vgg, etc.)
+* Time-series regression and classification (biological, RF signals)
+
+## Theory of the operation
 
 
 
-NOTE: Full description of the project will be added later.
+## Comparison to the wavelet processing
 
 
-Python/ Matlab project for detection abnormal ECG signals.
 
-Final performance: AUC-ROC 0.985
+## Example and benchmarks
 
-Dataset: https://www.kaggle.com/shayanfazeli/heartbeat/home
-Download weights of the model (66Mb): https://drive.google.com/file/d/1nNueZK04G0hY1OMzG7zJdWeoAR7xjUnh/view?usp=sharing
 
-Hardware: Laptop Acer Nitro 5, CPU: i7-8750H, GPU: 1050Ti, 16GB RAM +SSD
 
-Required frameworks: Keras, Tensorflow, Sklearn, Pandas, Numpy
-
-Used techniques for accuracy improvement:
-
-1. Stacking of CNNs with different kernel sizes, averaging and learning in one graph 
-2. Downsampling up to 85Hz
-3. Dropout
-4. Snapshot ensembles
-5. Ensembling in folds
-
-Total number of models: 50, training time ~ 3 hours
+## How to launch
