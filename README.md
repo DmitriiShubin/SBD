@@ -1,4 +1,4 @@
-## Summary
+# Summary
 
 This repository demonstrates ability to improve the target metring of the Deep Neural Network through the **Sub-Band Decomposition** - the method of the time-series pre-processing.
 
@@ -9,9 +9,9 @@ Applications:
 * Time-series segmentation (seq2seq, 1D-Unet, 1D-Vgg, etc.)
 * Time-series regression and classification (biological, RF signals)
 
-## Theory of the operation
+# Theory of the operation
 
-# Algorithm basics
+## Algorithm basics
 
 Any Time-series can be represented in time and frequency domains:
 
@@ -23,15 +23,15 @@ That means, for the rest of the shapes in the dataset, there are 'usefull' frequ
 
 
 
-# Algorithm description
+## Algorithm description
 
 
-## Comparison to the wavelet processing
-
-
-
-## Example and benchmarks
+# Comparison to the wavelet processing
 
 
 
-## How to launch
+# Example and benchmarks
+
+
+
+# How to launch the code
