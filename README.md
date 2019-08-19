@@ -30,9 +30,9 @@ That means, for the rest of the shapes in the dataset, there are 'useful' freque
 Considering there is the input data: 
 Data.shape = [n_samples,n_channels,Length] (Pytorch-like)
 
-1. Generate the batch of filters (filer bank) with N filters (overlap between filters is preferable. The order of filters if defined with respect to the accuracy/computational time trade-off)
+1. Generate the batch of filters (filer bank) with N filters (overlap between filters is preferable. The order of filters is defined with respect to the accuracy/computational time trade-off)
 
-2. Apply all filters in the data, combine the filtered data into channels:
+2. Apply all filters on the data, combine the filtered data into channels:
 
 Data.shape = [n_samples,n_channels * n_filters,Length]
 
@@ -42,8 +42,8 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
   
   5.1 Remove one channel
   5.2 Estimate the score without one channel
-  5.3 If the score is not improved - return channel back; overwise continue
-  5.4 Check all channels one by one using algorithm represented above
+  5.3 If the score is not improved - return the channel back; overwise continue
+  5.4 Check all channels one by one using procedure described above
 
 
 # Example and benchmarks
