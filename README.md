@@ -27,7 +27,7 @@ That means, for the rest of the shapes in the dataset, there are 'useful' freque
 
 ## Algorithm description
 
-input:
+Considering there is the input data: 
 Data.shape = [n_samples,n_channels,Length] (Pytorch-like)
 
 1. Generate the batch of filters (filer bank) with N filters (overlap between filters is preferable. The order of filters if defined with respect to the accuracy/computational time trade-off)
