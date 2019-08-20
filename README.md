@@ -48,6 +48,26 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 # Example and benchmarks
 
+Typically, the following approach allows to fine tune the model by 1-3%.
+
+The following example demonstrates perfomance of the approach.
+
+Dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heart beats.
+
+The objective: binary classification; target metric - ROC-AUC score.
+
+The dataest is splited into test and train set; 4046 data samples in each. 
+
+Labales are ideally balanced to make the ROC-AUC less robust for perfomance evaluation.
+
+Results of the run are represented below:
+
+| Condition | ROC-AUC |
+| Without the noise | 0.909576370915403  |
+| With noise, no SBD | 0.8586118870661277  |
+| With Noise, with SBD | 0.8677259918757673  |
+
+mprovement of the ROC-AUC score is 0.9%
 
 
 # How to launch the code
