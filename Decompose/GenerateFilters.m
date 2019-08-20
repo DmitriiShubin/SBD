@@ -1,5 +1,5 @@
-n_filters = 100;
-fil_order = 300;
+n_filters = 32;
+fil_order = 50;
 
 lpf = designfilt('lowpassfir','FilterOrder',fil_order ,'CutoffFrequency',1/n_filters,'DesignMethod','Window'); 
 hpf = designfilt('highpassfir','FilterOrder',fil_order ,'CutoffFrequency',(n_filters-1)/n_filters,'DesignMethod','Window'); 
