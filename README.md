@@ -21,7 +21,7 @@ _The theory behind the operation of the **Convolution Neural Network (CNN)** (LS
 
 
 
-That means, for the rest of the shapes in the dataset, there are 'useful' frequency bands for the target loss function and 'useless' frequency bands which insert bias, variance, and the noise into the model:
+That means, for the lots of the shapes in the dataset, there are 'useful' frequency bands for the target loss function and 'useless' frequency bands which insert bias, variance, and the noise into the model:
 
 
 
@@ -48,6 +48,25 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 # Example and benchmarks
 
+Typically, the following approach allows to fine tune the model by 1-3%.
 
+The following example demonstrates perfomance of the approach.
+
+Dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heart beats.
+
+The objective: binary classification; target metric - ROC-AUC score.
+
+The dataest is splited into test and train set; 4046 data samples in each. 
+
+Labales are ideally balanced to make the ROC-AUC less robust for perfomance evaluation.
+
+Results of the run are represented below:
+
+| Condition             | ROC-AUC             |
+| --------------------- | ------------------- |
+| Without the noise     | 0.86280705338223    |
+| With noise, no SBD    | 0.8165197212035437  |
+| With Noise, with SBD  | 0.8466614603288788  |
+| Improvement           | 0.03                | 
 
 # How to launch the code
