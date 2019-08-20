@@ -21,7 +21,7 @@ _The theory behind the operation of the **Convolution Neural Network (CNN)** (LS
 
 
 
-That means, for the rest of the shapes in the dataset, there are 'useful' frequency bands for the target loss function and 'useless' frequency bands which insert bias, variance, and the noise into the model:
+That means, for the lots of the shapes in the dataset, there are 'useful' frequency bands for the target loss function and 'useless' frequency bands which insert bias, variance, and the noise into the model:
 
 
 
@@ -62,14 +62,11 @@ Labales are ideally balanced to make the ROC-AUC less robust for perfomance eval
 
 Results of the run are represented below:
 
-
-| Condition             | Second Header       |
+| Condition             | ROC-AUC             |
 | --------------------- | ------------------- |
-| Without the noise     | 0.909576370915403   |
-| With noise, no SBD    | 0.8586118870661277  |
-| With Noise, with SBD  | 0.8677259918757673  |
-
-mprovement of the ROC-AUC score is 0.9%
-
+| Without the noise     | 0.86280705338223    |
+| With noise, no SBD    | 0.8165197212035437  |
+| With Noise, with SBD  | 0.8466614603288788  |
+| Improvement           | 0.03                | 
 
 # How to launch the code
