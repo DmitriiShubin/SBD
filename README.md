@@ -62,10 +62,12 @@ Labales are ideally balanced to make the ROC-AUC less robust for perfomance eval
 
 Results of the run are represented below:
 
-| Condition | ROC-AUC |
-| Without the noise | 0.909576370915403  |
-| With noise, no SBD | 0.8586118870661277  |
-| With Noise, with SBD | 0.8677259918757673  |
+
+| Condition             | Second Header       |
+| --------------------- | ------------------- |
+| Without the noise     | 0.909576370915403   |
+| With noise, no SBD    | 0.8586118870661277  |
+| With Noise, with SBD  | 0.8677259918757673  |
 
 mprovement of the ROC-AUC score is 0.9%
 
