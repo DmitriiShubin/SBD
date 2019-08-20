@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="879491de-5ffe-4691-8918-2a2aeab0df59" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/checkpoint.pt" beforeDir="false" afterPath="$PROJECT_DIR$/checkpoint.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/model.pt" beforeDir="false" afterPath="$PROJECT_DIR$/model/model.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/Clean_signal.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/Clean_signal.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/Learning_curve_with_noise.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/Learning_curve_with_noise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/Learning_curve_without_noise.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/Learning_curve_without_noise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pictures/Noisy_signal.png" beforeDir="false" afterPath="$PROJECT_DIR$/pictures/Noisy_signal.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -272,14 +263,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.165786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6605375" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18953323" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.38613862" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
