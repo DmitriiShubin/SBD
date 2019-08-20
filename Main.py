@@ -37,17 +37,16 @@ print('________________________________________')
 
 
 
-
 print('Training with the noise + SBD')
 
 #create datasets
 GetData = DataGenerator(decomp=True,
-                 noise=False,
+                 noise=True,
                  data_path=DATA_PATH,
                  test_name=TEST_NAME,
                  train_name=TRAIN_NAME)
 
-features = np.arange(102)
+features = np.arange(32)
 features = list(np.flip(features))
 
 

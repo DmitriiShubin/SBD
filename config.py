@@ -41,17 +41,17 @@ MODEL_NAME = MODEL_PATH + 'model.pt'
 
 #training params
 N_EPOCH = 100
-LR = 1e-2
+LR = 1e-3
 LR_CUCLES = 5
 
 # early stopping settings
 DELTA = 0.001 # thresold of improvement
 PATIENCE = 10 # wait for 10 epoches for emprovement
-BATCH_SIZE = 256
+BATCH_SIZE = 512
 N_FOLD = 2 #number of folds for cross-validation
 VERBOSE = 500 # print score every n batches
 
-NOISE_STD = 0.5 #standard deviation of the noise
+NOISE_STD = 0.05 #standard deviation of the noise
 
 #input and output sizes of the model
 INPUT_SIZE = 128
@@ -61,7 +61,7 @@ OUT_SIZE = 1
 HYPERPARAM = dict()
 
 #global dropout rate
-HYPERPARAM['Drop_rate'] = 0.5
+HYPERPARAM['Drop_rate'] = 0.25
 
 #number of filers for the model
 HYPERPARAM['n_filt_1'] = 128
