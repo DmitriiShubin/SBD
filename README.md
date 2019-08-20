@@ -27,6 +27,8 @@ That means, for the lots of the shapes in the dataset, there are 'useful' freque
 
 ## Algorithm description
 
+SBD is working as a pre-trained input layer of the DN. After the initial decomposition of the time-series, all components are combined into the vector and considered as features for the future Backward Recurrent Feature Elimination to find out the optimal bandwidth for fitting the model.
+
 Considering there is the input data: 
 Data.shape = [n_samples,n_channels,Length] (Pytorch-like)
 
@@ -48,17 +50,17 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 # Example and benchmarks
 
-Typically, the following approach allows to fine tune the model by 1-3%.
+Typically, the following approach allows fine-tuning the model by 1-3%.
 
-The following example demonstrates perfomance of the approach.
+The following example demonstrates the perfomance of the approach.
 
-Dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heart beats.
+The dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heartbeats.
 
 The objective: binary classification; target metric - ROC-AUC score.
 
-The dataest is splited into test and train set; 4046 data samples in each. 
+The dataset is split into test and train set; 4046 data samples in each. 
 
-Labales are ideally balanced to make the ROC-AUC less robust for perfomance evaluation.
+Labels are ideally balanced to make the ROC-AUC less robust for performance evaluation.
 
 Results of the run are represented below:
 
