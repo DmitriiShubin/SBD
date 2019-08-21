@@ -21,7 +21,7 @@ _The theory behind the operation of the **Convolution Neural Network (CNN)** (LS
 
 ![cnn](/pictures/cnnPNG.PNG)
 
-That means, CNN/LSTM is trying to find some optimal frequency bands usefull for the loss function. Let's try to put the model "on rails": the following method conciders applying the bank of FIR filters on the data in order to identify what fequency domains are "useless" for the model:
+That means, CNN/LSTM is trying to find some optimal frequency bands useful for the loss function. Let's try to put the model "on rails": the following method considers applying the bank of FIR filters on the data in order to identify what frequency domains are "useless" for the model:
 
 ![sbd](/pictures/SBD.PNG)
 
@@ -34,7 +34,7 @@ SBD is working as a pre-trained input layer of the DN. After the initial decompo
 Considering there is the input data: 
 Data.shape = [n_samples,n_channels,Length] (Pytorch-like)
 
-1. Generate the batch of filters (filer bank) with N filters. Overlap between filters is preferable. The order of filters is defined with respect to the accuracy/computational time trade-off. 
+1. Generate the batch of filters (filer bank) with N filters. The overlap between filters is preferable. The order of filters is defined with respect to the accuracy/computational time trade-off. 
 
 2. Apply all filters on the data, combine the filtered data into channels:
 
@@ -52,7 +52,7 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 # Example and benchmarks
 
-The following example demonstrates the perfomance of the approach, which is about of 1-3% improvement of the quality.
+The following example demonstrates the performance of the approach, which is about 1-3% improvement of the quality.
 
 
 **Objective**
@@ -66,7 +66,7 @@ The following example demonstrates the perfomance of the approach, which is abou
 
 The dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heartbeats.
 
-It is splitted into test and train set; 4046 data samples in each. 
+It is split into test and train set; 4046 data samples in each. 
 
 Labels are ideally balanced to make the ROC-AUC less robust for performance evaluation.
 
