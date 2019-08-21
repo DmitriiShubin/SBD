@@ -85,7 +85,6 @@ The model has 3 channels, with different sizes of kernels, which means this mode
 
 **Results**
 
-**Experiment #1, Learning rate = 1e-3:
 
 | Condition             | ROC-AUC             |
 | --------------------- | ------------------- |
