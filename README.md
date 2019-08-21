@@ -71,7 +71,7 @@ It is split into test and train set; 4046 data samples in each.
 Labels are ideally balanced to make the ROC-AUC less robust for performance evaluation.
 
 There were 3 experiments for the training:
-1. training the model of the original dataset
+1. Training the model on the original dataset
 2. Training the model with added Gaussian White Noise with STD = 0.05
 3. Training the model with the White noise and applying SBD approach
 
