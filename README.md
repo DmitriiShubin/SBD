@@ -6,7 +6,7 @@ Applications:
 
 * Audio processing, voice recognition, GAN-based de-noising, personalized audio Deep Networks
 * Time-series forecasting (Energy consumption, stock prices, real-estate prices)
-* Time-series segmentation (seq2seq, 1D-Unet, 1D-VGG, etc.)
+* Time-series segmentation (seq2seq, 1D-Unet, 1D Variational autoencoder, etc.)
 * Time-series regression and classification (biological, RF signals)
 
 # Theory of the operation
