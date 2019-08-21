@@ -19,12 +19,11 @@ Any Time-series can be represented in time and frequency domains:
 
 _The theory behind the operation of the **Convolution Neural Network (CNN)** (LSTM/RNN) applied to Time-series, literally, is equal to applying the set of ![FIR](https://en.wikipedia.org/wiki/Finite_impulse_response) (![IIR](https://en.wikipedia.org/wiki/Infinite_impulse_response) for recurrent NNs) filters (i.e. kernels), passed through the non-linear function:_
 
-
+![cnn](/pictures/cnnPNG.png)
 
 That means, CNN/LSTM is trying to find some optimal frequency bands usefull for the loss function. Let's try to put the model "on rails": the following method conciders applying the bank of FIR filters on the data in order to identify what fequency domains are "useless" for the model:
 
-
-
+![sbd](/pictures/SBD.png)
 
 ## Algorithm description
 
@@ -82,8 +81,7 @@ There were 3 experiments for the training:
 
 The model has 3 channels, with different sizes of kernels, which means this model is optimized to analyse both "quick" and "slow" changes in the input sequence.
 
-
-
+![sbd](/pictures/modelPNG.png)
 
 **Results**
 
