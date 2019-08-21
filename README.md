@@ -17,11 +17,12 @@ Any Time-series can be represented in time and frequency domains:
 
 
 
-_The theory behind the operation of the **Convolution Neural Network (CNN)** (LSTM/RNN) applied on Time-series, literally, is equal to applying the set of ![FIR](https://en.wikipedia.org/wiki/Finite_impulse_response) (![IIR](https://en.wikipedia.org/wiki/Infinite_impulse_response) for recurrent NNs) filters (i.e. kernels), passed through the non-linear function:_
+_The theory behind the operation of the **Convolution Neural Network (CNN)** (LSTM/RNN) applied to Time-series, literally, is equal to applying the set of ![FIR](https://en.wikipedia.org/wiki/Finite_impulse_response) (![IIR](https://en.wikipedia.org/wiki/Infinite_impulse_response) for recurrent NNs) filters (i.e. kernels), passed through the non-linear function:_
 
 
 
-That means, for the lots of the shapes in the dataset, there are 'useful' frequency bands for the target loss function and 'useless' frequency bands which insert bias, variance, and the noise into the model:
+That means, CNN/LSTM is trying to find some optimal frequency bands usefull for the loss function. Let's try to put the model "on rails": the following method conciders applying the bank of FIR filters on the data in order to identify what fequency domains are "useless" for the model:
+
 
 
 
@@ -29,10 +30,12 @@ That means, for the lots of the shapes in the dataset, there are 'useful' freque
 
 SBD is working as a pre-trained input layer of the DN. After the initial decomposition of the time-series, all components are combined into the vector and considered as features for the future Backward Recurrent Feature Elimination to find out the optimal bandwidth for fitting the model.
 
+**Algorithm:**
+
 Considering there is the input data: 
 Data.shape = [n_samples,n_channels,Length] (Pytorch-like)
 
-1. Generate the batch of filters (filer bank) with N filters (overlap between filters is preferable. The order of filters is defined with respect to the accuracy/computational time trade-off)
+1. Generate the batch of filters (filer bank) with N filters. Overlap between filters is preferable. The order of filters is defined with respect to the accuracy/computational time trade-off. 
 
 2. Apply all filters on the data, combine the filtered data into channels:
 
@@ -50,19 +53,41 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 # Example and benchmarks
 
-Typically, the following approach allows fine-tuning the model by 1-3%.
+The following example demonstrates the perfomance of the approach, which is about of 1-3% improvement of the quality.
 
-The following example demonstrates the perfomance of the approach.
+
+**Objective**
+
+- Binary classification
+
+-Target metric is ROC-AUC score
+
+
+**Data**
 
 The dataset contains samples of Abnormal and Normal Electrocardiography (ECG) heartbeats.
 
-The objective: binary classification; target metric - ROC-AUC score.
-
-The dataset is split into test and train set; 4046 data samples in each. 
+It is splitted into test and train set; 4046 data samples in each. 
 
 Labels are ideally balanced to make the ROC-AUC less robust for performance evaluation.
 
-Results of the run are represented below:
+There were 3 experiments for the training:
+1. training the model of the original dataset
+2. Training the model with added Gaussian White Noise with STD = 0.05
+3. Training the model with the White noise and applying SBD approach
+
+**All scores were estimated in the Test set only.**
+
+**Model**
+
+The model has 3 channels, with different sizes of kernels, which means this model is optimized to analyse both "quick" and "slow" changes in the input sequence.
+
+
+
+
+**Results**
+
+**Experiment #1, Learning rate = 1e-3:
 
 | Condition             | ROC-AUC             |
 | --------------------- | ------------------- |
@@ -71,4 +96,13 @@ Results of the run are represented below:
 | With Noise, with SBD  | 0.8466614603288788  |
 | Improvement           | 0.03                | 
 
+
 # How to launch the code
+
+1. follow the ./dependences folder
+2. launch the install.py script
+3. wait for installation
+3. get back to the main folder
+4. Run the Main.py script
+
+In order to change the model parameters, refere to the config.py script
