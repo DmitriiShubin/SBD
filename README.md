@@ -68,14 +68,14 @@ The dataset contains samples of Abnormal and Normal Electrocardiography (ECG) he
 
 It is split into test and train set; 4046 data samples in each. 
 
-Labels are ideally balanced to make the ROC-AUC less robust for performance evaluation.
+Labels are ideally balanced to make the ROC-AUC more robust for performance evaluation.
 
 There were 3 experiments for the training:
 1. Training the model on the original dataset
 2. Training the model with added Gaussian White Noise with STD = 0.05
 3. Training the model with the White noise and applying SBD approach
 
-**All scores were estimated in the Test set only.**
+**All scores were estimated on the Test set only.**
 
 **Model**
 
@@ -101,5 +101,9 @@ The model has 3 channels, with different sizes of kernels, which means this mode
 3. wait for installation
 3. get back to the main folder
 4. Run the Main.py script
+
+Pytorch requirements:
+
+Cuda9.x + CuDNN
 
 In order to change the model parameters, refere to the config.py script
