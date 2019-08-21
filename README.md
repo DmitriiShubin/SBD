@@ -42,7 +42,7 @@ Data.shape = [n_samples,n_channels * n_filters,Length]
 
 4. Feed the data into the network, estimate the target score
 
-5. Considering each channel as a separate feature, apply Recurrent Feature Elimination:
+5. Considering each channel as a separate feature, apply Backward Recursive Feature Elimination:
   
   5.1 Remove one channel
   5.2 Estimate the score without one channel
