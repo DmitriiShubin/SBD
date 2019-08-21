@@ -15,7 +15,7 @@ Applications:
 
 Any Time-series can be represented in time and frequency domains:
 
-![FFT](https://github.com/DmitriiShubin/SBD/tree/master/pictures/fft.png)
+![FFT](/pictures/fft.png)
 
 _The theory behind the operation of the **Convolution Neural Network (CNN)** (LSTM/RNN) applied to Time-series, literally, is equal to applying the set of ![FIR](https://en.wikipedia.org/wiki/Finite_impulse_response) (![IIR](https://en.wikipedia.org/wiki/Infinite_impulse_response) for recurrent NNs) filters (i.e. kernels), passed through the non-linear function:_
 
