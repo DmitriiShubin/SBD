@@ -41,7 +41,7 @@ MODEL_NAME = MODEL_PATH + 'model.pt'
 
 #training params
 N_EPOCH = 100
-LR = 1e-3
+LR = 0.1
 LR_CUCLES = 5
 
 # early stopping settings

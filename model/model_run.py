@@ -49,25 +49,21 @@ class Model:
 
     def fit(self,X_train,y_train,X_val,y_val):
 
-        #define optimizer
-        self.optimizer = optim.Adam(self.net.parameters(), lr=self.lr)
-
-        #define early stopping
-        early_stopping = EarlyStopping(patience=self.patience, verbose=True, delta=self.delta)
 
         lr = self.lr
         delta = self.delta
 
-        #reduce the LR on plateau 3 times:
-        #scheduler = ReduceLROnPlateau(self.optimizer, mode='max',
-                                      #patience=self.patience,
-                                      #threshold=self.delta,
-                                      #factor=0.3,verbose=True)
-
         train_loss_monitor = np.array([])
         test_loss_monitor = np.array([])
 
-        for cucle in range(self.LR_cucles+1):
+        for cycle in range(self.LR_cucles+1):
+
+            # define optimizer
+            self.optimizer = optim.Adam(self.net.parameters(), lr=lr)
+
+            # define early stopping
+            early_stopping = EarlyStopping(patience=self.patience, verbose=True, delta=delta)
+
 
             for epoch in range(self.n_epoch):
 
@@ -242,15 +238,10 @@ class Model:
                 self.net.load_state_dict(torch.load('checkpoint.pt'))
 
 
-            print('Reducing the learning rate')
-            print('Learning rate previous :',lr)
 
+            #reducing the learning rate
             lr /= 3
             delta /= 3
-
-            print('Learning rate new :', lr)
-            # define optimizer
-            self.optimizer.lr = optim.Adam(self.net.parameters(), lr=lr)
 
             # define early stopping
             early_stopping.delta = delta
